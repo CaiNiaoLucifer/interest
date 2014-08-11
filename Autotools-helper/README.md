@@ -7,22 +7,18 @@ to modify a few files that you can build your own project.
 
 1. Make sure that reposit directory is under the $(HOME)
 2. run createEmptyProject.py script with three parameters
-
-(1) project name
-(2) version
-(3) bug email
-
+- project name
+- version
+- bug email
 3. Now you can find the new produced project directory eg.EchoServer and you
    need to put your source files in the src dir and you header files in the
    include dir
 4.  You should modify some files. In the next, EchoServer means the project top_dir
-
-(1) $(top_dir)/configure.ac:if you want to add your own compile options,modify it.
-(2) $(top_dir)/Makefile.am: if you want to add or delete sundirs, modify it.(the
+- $(top_dir)/configure.ac:if you want to add your own compile options,modify it.
+- $(top_dir)/Makefile.am: if you want to add or delete sundirs, modify it.(the
   subdirs you write control whether to compile the source files in them)
-(3) $(top_dir)/src/Makefile.am: you need to write in this file that where you put your
+- $(top_dir)/src/Makefile.am: you need to write in this file that where you put your
   executable file and the source files requested to produce the executable file
   and the link infomation and your own header files' path
-
-4. return to the $(top_dir) run autoreconf
-5. Enter the $(top_dir)/build run ../configure then make
+5. return to the $(top_dir) run autoreconf
+6. Enter the $(top_dir)/build run ../configure then make
