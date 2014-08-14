@@ -24,6 +24,9 @@ AC_ARG_ENABLE(debug, [  --enable-debug	Enable DEBUG output. ],
 
 # Checks for libraries.
 
+AC_CHECK_LIB([rt], [clock_gettime], [], [AC_MSG_FAILURE([rt liberary not found])])
+AC_CHECK_LIB([pthread], [pthread_create], [], [AC_MSG_FAILURE([pthread liberary not found])])
+
 # Checks for header files.
 
 # Checks for typedefs, structures, and compiler characteristics.
